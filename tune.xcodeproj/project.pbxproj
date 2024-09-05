@@ -13,6 +13,8 @@
 		24635D9F2C86C005009D21D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24635D9E2C86C005009D21D2 /* Preview Assets.xcassets */; };
 		2485D2E32C8A209700C82AC5 /* GuitarStringsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485D2E22C8A209700C82AC5 /* GuitarStringsView.swift */; };
 		248B58A02C8A231100122C89 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B589F2C8A231100122C89 /* AudioPlayer.swift */; };
+		248B58A22C8A248800122C89 /* AudioPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B58A12C8A248800122C89 /* AudioPlayerViewModel.swift */; };
+		248B58A42C8A26BE00122C89 /* IAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B58A32C8A26BE00122C89 /* IAudioPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		24635D9E2C86C005009D21D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2485D2E22C8A209700C82AC5 /* GuitarStringsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarStringsView.swift; sourceTree = "<group>"; };
 		248B589F2C8A231100122C89 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		248B58A12C8A248800122C89 /* AudioPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewModel.swift; sourceTree = "<group>"; };
+		248B58A32C8A26BE00122C89 /* IAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				248B589F2C8A231100122C89 /* AudioPlayer.swift */,
+				248B58A32C8A26BE00122C89 /* IAudioPlayer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 		2485D2E12C8A203500C82AC5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				248B58A12C8A248800122C89 /* AudioPlayerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -168,9 +174,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				24635D9A2C86C004009D21D2 /* ContentView.swift in Sources */,
+				248B58A22C8A248800122C89 /* AudioPlayerViewModel.swift in Sources */,
 				24635D982C86C004009D21D2 /* tuneApp.swift in Sources */,
 				2485D2E32C8A209700C82AC5 /* GuitarStringsView.swift in Sources */,
 				248B58A02C8A231100122C89 /* AudioPlayer.swift in Sources */,
+				248B58A42C8A26BE00122C89 /* IAudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

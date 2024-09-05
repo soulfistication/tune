@@ -8,16 +8,7 @@
 import Foundation
 import AVKit
 
-protocol IAudioPlayer {
-    func playLowEString()
-    func playAString()
-    func playDString()
-    func playGString()
-    func playBString()
-    func playHighEString()
-}
-
-class AudioPlayer: IAudioPlayer {
+class AudioPlayer {
 
     func playLowEString() {
         print("Playing Low E string")
