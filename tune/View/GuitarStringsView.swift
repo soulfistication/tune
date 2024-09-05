@@ -61,9 +61,15 @@ struct GuitarStringsView: View {
                     .fontWeight(.bold)
             }
             .padding(.vertical)
-            Text("Status: Playing = \(viewModel.isPlaying)")
-                .font(.caption2)
-                .padding(.vertical)
+            if viewModel.isPlaying {
+                Image(systemName: "play.circle.fill")
+                    .imageScale(.large)
+                    .padding(.vertical)
+            } else {
+                Image(systemName: "pause.circle.fill")
+                    .imageScale(.large)
+                    .padding(.vertical)
+            }
         }
         .padding()
     }
