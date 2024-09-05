@@ -14,32 +14,50 @@ struct ContentView: View {
                 print("E string tapped")
             } label: {
                 Text("E")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.bold)
             }
+            .padding(.vertical)
             Button {
                 print("A string tapped")
             } label: {
                 Text("A")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.bold)
             }
+            .padding(.vertical)
             Button {
                 print("D string tapped")
             } label: {
                 Text("D")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.bold)
             }
+            .padding(.vertical)
             Button {
                 print("G string tapped")
             } label: {
                 Text("G")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.bold)
             }
+            .padding(.vertical)
             Button {
                 print("B string tapped")
             } label: {
                 Text("B")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.bold)
             }
+            .padding(.vertical)
             Button {
-                print("Hight E string tapped")
+                print("High E string tapped")
             } label: {
                 Text("E")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.bold)
             }
+            .padding(.vertical)
         }
         .padding()
     }
