@@ -1,20 +1,20 @@
 //
-//  ContentView.swift
+//  GuitarStringView.swift
 //  tune
 //
-//  Created by Ivan Almada on 9/2/24.
+//  Created by Ivan Almada on 9/5/24.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct GuitarStringsView: View {
     var body: some View {
         VStack {
             Button {
                 print("E string tapped")
             } label: {
                 Text("E")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .font(.title)
                     .fontWeight(.bold)
             }
             .padding(.vertical)
@@ -22,7 +22,7 @@ struct ContentView: View {
                 print("A string tapped")
             } label: {
                 Text("A")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .font(.title)
                     .fontWeight(.bold)
             }
             .padding(.vertical)
@@ -30,7 +30,7 @@ struct ContentView: View {
                 print("D string tapped")
             } label: {
                 Text("D")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .font(.title)
                     .fontWeight(.bold)
             }
             .padding(.vertical)
@@ -38,7 +38,7 @@ struct ContentView: View {
                 print("G string tapped")
             } label: {
                 Text("G")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .font(.title)
                     .fontWeight(.bold)
             }
             .padding(.vertical)
@@ -46,7 +46,7 @@ struct ContentView: View {
                 print("B string tapped")
             } label: {
                 Text("B")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .font(.title)
                     .fontWeight(.bold)
             }
             .padding(.vertical)
@@ -54,7 +54,7 @@ struct ContentView: View {
                 print("High E string tapped")
             } label: {
                 Text("E")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .font(.title)
                     .fontWeight(.bold)
             }
             .padding(.vertical)
@@ -64,5 +64,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    GuitarStringsView()
 }
