@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct GuitarStringsView: View {
+
+    @ObservedObject var viewModel: AudioPlayerViewModel
+
     var body: some View {
         VStack {
             Button {
@@ -58,11 +61,14 @@ struct GuitarStringsView: View {
                     .fontWeight(.bold)
             }
             .padding(.vertical)
+            Text("Status: Playing = \(viewModel.isPlaying)")
+                .font(.caption2)
+                .padding(.vertical)
         }
         .padding()
     }
 }
 
 #Preview {
-    GuitarStringsView()
+    GuitarStringsView(viewModel: AudioPlayerViewModel(player: AudioPlayer()))
 }

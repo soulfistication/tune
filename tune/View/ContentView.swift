@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    let viewModel = AudioPlayerViewModel(player: AudioPlayer())
+
     var body: some View {
-        GuitarStringsView()
+        GuitarStringsView(viewModel: viewModel)
     }
 }
 
