@@ -14,7 +14,7 @@ struct GuitarStringsView: View {
     var body: some View {
         VStack {
             Button {
-                print("E string tapped")
+                viewModel.playLowEString()
             } label: {
                 Text("E")
                     .font(.title)
@@ -22,7 +22,7 @@ struct GuitarStringsView: View {
             }
             .padding(.vertical)
             Button {
-                print("A string tapped")
+                viewModel.playAString()
             } label: {
                 Text("A")
                     .font(.title)
@@ -30,7 +30,7 @@ struct GuitarStringsView: View {
             }
             .padding(.vertical)
             Button {
-                print("D string tapped")
+                viewModel.playDString()
             } label: {
                 Text("D")
                     .font(.title)
@@ -38,7 +38,7 @@ struct GuitarStringsView: View {
             }
             .padding(.vertical)
             Button {
-                print("G string tapped")
+                viewModel.playGString()
             } label: {
                 Text("G")
                     .font(.title)
@@ -46,7 +46,7 @@ struct GuitarStringsView: View {
             }
             .padding(.vertical)
             Button {
-                print("B string tapped")
+                viewModel.playBString()
             } label: {
                 Text("B")
                     .font(.title)
@@ -54,7 +54,7 @@ struct GuitarStringsView: View {
             }
             .padding(.vertical)
             Button {
-                print("High E string tapped")
+                viewModel.playHighEString()
             } label: {
                 Text("E")
                     .font(.title)
