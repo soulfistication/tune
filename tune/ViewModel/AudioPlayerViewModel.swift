@@ -21,55 +21,44 @@ class AudioPlayerViewModel: ObservableObject, IAudioPlayer {
     func playLowEString() {
         player.playLowEString()
         isPlaying = true
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now().advanced(by: DispatchTimeInterval.seconds(2)), execute: DispatchWorkItem(block: {
-            print("Finished playing Low E string")
-            self.isPlaying = false
-        }))
+        simulatePlaySound()
     }
     
     func playAString() {
         player.playAString()
         isPlaying = true
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now().advanced(by: DispatchTimeInterval.seconds(2)), execute: DispatchWorkItem(block: {
-            print("Finished playing A string")
-            self.isPlaying = false
-        }))
+        simulatePlaySound()
     }
     
     func playDString() {
         player.playDString()
         isPlaying = true
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now().advanced(by: DispatchTimeInterval.seconds(2)), execute: DispatchWorkItem(block: {
-            print("Finished playing D string")
-            self.isPlaying = false
-        }))
+        simulatePlaySound()
     }
     
     func playGString() {
         player.playGString()
         isPlaying = true
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now().advanced(by: DispatchTimeInterval.seconds(2)), execute: DispatchWorkItem(block: {
-            print("Finished playing G string")
-            self.isPlaying = false
-        }))
+        simulatePlaySound()
     }
     
     func playBString() {
         player.playBString()
         isPlaying = true
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now().advanced(by: DispatchTimeInterval.seconds(2)), execute: DispatchWorkItem(block: {
-            print("Finished playing B string")
-            self.isPlaying = false
-        }))
+        simulatePlaySound()
     }
     
     func playHighEString() {
         player.playHighEString()
         isPlaying = true
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now().advanced(by: DispatchTimeInterval.seconds(2)), execute: DispatchWorkItem(block: {
-            print("Finished playing High E string")
+        simulatePlaySound()
+    }
+
+    func simulatePlaySound() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            print("Finished playing Low E string")
             self.isPlaying = false
-        }))
+        }
     }
 
 }
