@@ -18,12 +18,15 @@ class AudioPlayer {
     let highEStringPlayer: AVAudioPlayer
 
     init?() {
-        guard let lowEStringURL = Bundle.main.url(forResource: "lowEString", withExtension: ".mp3") else { return nil }
-        guard let aStringURL = Bundle.main.url(forResource: "aString", withExtension: ".mp3") else { return nil }
-        guard let dStringURL = Bundle.main.url(forResource: "dString", withExtension: ".mp3") else { return nil }
-        guard let gStringURL = Bundle.main.url(forResource: "gString", withExtension: ".mp3") else { return nil }
-        guard let bStringURL = Bundle.main.url(forResource: "bString", withExtension: ".mp3") else { return nil }
-        guard let highEStringURL = Bundle.main.url(forResource: "highEString", withExtension: ".mp3") else { return nil }
+        guard let 
+                lowEStringURL = Bundle.main.url(forResource: "lowEString", withExtension: ".mp3"),
+                let aStringURL = Bundle.main.url(forResource: "aString", withExtension: ".mp3"),
+              let dStringURL = Bundle.main.url(forResource: "dString", withExtension: ".mp3"),
+              let gStringURL = Bundle.main.url(forResource: "gString", withExtension: ".mp3"),
+              let bStringURL = Bundle.main.url(forResource: "bString", withExtension: ".mp3"),
+              let highEStringURL = Bundle.main.url(forResource: "highEString", withExtension: ".mp3") else {
+            return nil
+        }
 
         do {
             lowEStringPlayer = try AVAudioPlayer(contentsOf: lowEStringURL, fileTypeHint: ".mp3")
