@@ -19,46 +19,33 @@ class AudioPlayerViewModel: ObservableObject, IAudioPlayer {
     }
 
     func playLowEString() {
+        isPlaying.toggle()
         player.playLowEString()
-        isPlaying = true
-        simulatePlaySound()
     }
     
     func playAString() {
+        isPlaying.toggle()
         player.playAString()
-        isPlaying = true
-        simulatePlaySound()
     }
     
     func playDString() {
+        isPlaying.toggle()
         player.playDString()
-        isPlaying = true
-        simulatePlaySound()
     }
     
     func playGString() {
+        isPlaying.toggle()
         player.playGString()
-        isPlaying = true
-        simulatePlaySound()
     }
     
     func playBString() {
+        isPlaying.toggle()
         player.playBString()
-        isPlaying = true
-        simulatePlaySound()
     }
     
     func playHighEString() {
+        isPlaying.toggle()
         player.playHighEString()
-        isPlaying = true
-        simulatePlaySound()
-    }
-
-    func simulatePlaySound() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            print("Finished playing Low E string")
-            self.isPlaying = false
-        }
     }
 
 }
