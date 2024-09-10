@@ -60,33 +60,51 @@ class AudioPlayer {
     }
 
     func playLowEString() {
-        print("Playing Low E string")
-        lowEStringPlayer.play()
+        if lowEStringPlayer.isPlaying {
+            lowEStringPlayer.stop()
+        } else {
+            lowEStringPlayer.play()
+        }
     }
     
     func playAString() {
-        print("Playing A string")
-        aStringPlayer.play()
+        if aStringPlayer.isPlaying {
+            aStringPlayer.stop()
+        } else {
+            aStringPlayer.play()
+        }
     }
     
     func playDString() {
-        print("Playing D string")
-        dStringPlayer.play()
+        if dStringPlayer.isPlaying {
+            dStringPlayer.stop()
+        } else {
+            dStringPlayer.play()
+        }
     }
     
     func playGString() {
-        print("Playing G string")
-        gStringPlayer.play()
+        if gStringPlayer.isPlaying {
+            gStringPlayer.stop()
+        } else {
+            gStringPlayer.play()
+        }
     }
     
     func playBString() {
-        print("Playing B string")
-        bStringPlayer.play()
+        if bStringPlayer.isPlaying {
+            bStringPlayer.stop()
+        } else {
+            bStringPlayer.play()
+        }
     }
     
     func playHighEString() {
-        print("Playing High E string")
-        highEStringPlayer.play()
+        if highEStringPlayer.isPlaying {
+            highEStringPlayer.stop()
+        } else {
+            highEStringPlayer.play()
+        }
     }
 
 }
