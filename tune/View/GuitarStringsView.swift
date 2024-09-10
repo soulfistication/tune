@@ -76,5 +76,5 @@ struct GuitarStringsView: View {
 }
 
 #Preview {
-    GuitarStringsView(viewModel: AudioPlayerViewModel(player: AudioPlayer()))
+    GuitarStringsView(viewModel: AudioPlayerViewModel(player: AudioPlayer()!))
 }
