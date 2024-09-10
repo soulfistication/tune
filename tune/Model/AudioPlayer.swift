@@ -107,4 +107,13 @@ class AudioPlayer {
         }
     }
 
+    func isPlaying() -> Bool {
+        return lowEStringPlayer.isPlaying ||
+        aStringPlayer.isPlaying ||
+        dStringPlayer.isPlaying ||
+        gStringPlayer.isPlaying ||
+        bStringPlayer.isPlaying ||
+        highEStringPlayer.isPlaying
+    }
+
 }

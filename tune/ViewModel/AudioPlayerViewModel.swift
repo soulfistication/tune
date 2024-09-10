@@ -15,7 +15,7 @@ class AudioPlayerViewModel: ObservableObject, IAudioPlayer {
 
     init(player: AudioPlayer) {
         self.player = player
-        self.isPlaying = false
+        self.isPlaying = player.isPlaying()
     }
 
     func playLowEString() {
