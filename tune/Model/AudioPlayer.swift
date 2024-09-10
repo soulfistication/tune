@@ -5,7 +5,6 @@
 //  Created by Ivan Almada on 9/5/24.
 //
 
-import Foundation
 import AVFAudio
 
 class AudioPlayer {
@@ -19,22 +18,33 @@ class AudioPlayer {
 
     init?() {
         guard let 
-                lowEStringURL = Bundle.main.url(forResource: "lowEString", withExtension: ".mp3"),
-                let aStringURL = Bundle.main.url(forResource: "aString", withExtension: ".mp3"),
-              let dStringURL = Bundle.main.url(forResource: "dString", withExtension: ".mp3"),
-              let gStringURL = Bundle.main.url(forResource: "gString", withExtension: ".mp3"),
-              let bStringURL = Bundle.main.url(forResource: "bString", withExtension: ".mp3"),
-              let highEStringURL = Bundle.main.url(forResource: "highEString", withExtension: ".mp3") else {
-            return nil
-        }
+                lowEStringURL = Bundle.main.url(forResource: Config.lowEStringFileName,
+                                                withExtension: Config.fileExtension),
+              let aStringURL = Bundle.main.url(forResource: Config.aStringFileName,
+                                               withExtension: Config.fileExtension),
+              let dStringURL = Bundle.main.url(forResource: Config.dStringFileName,
+                                               withExtension: Config.fileExtension),
+              let gStringURL = Bundle.main.url(forResource: Config.gStringFileName,
+                                               withExtension: Config.fileExtension),
+              let bStringURL = Bundle.main.url(forResource: Config.bStringFileName,
+                                               withExtension: Config.fileExtension),
+              let highEStringURL = Bundle.main.url(forResource: Config.highEStringFileName,
+                                                   withExtension: Config.fileExtension)
+        else { return nil }
 
         do {
-            lowEStringPlayer = try AVAudioPlayer(contentsOf: lowEStringURL, fileTypeHint: ".mp3")
-            aStringPlayer = try AVAudioPlayer(contentsOf: aStringURL, fileTypeHint: ".mp3")
-            dStringPlayer = try AVAudioPlayer(contentsOf: dStringURL, fileTypeHint: ".mp3")
-            gStringPlayer = try AVAudioPlayer(contentsOf: gStringURL, fileTypeHint: ".mp3")
-            bStringPlayer = try AVAudioPlayer(contentsOf: bStringURL, fileTypeHint: ".mp3")
-            highEStringPlayer = try AVAudioPlayer(contentsOf: highEStringURL, fileTypeHint: ".mp3")
+            lowEStringPlayer = try AVAudioPlayer(contentsOf: lowEStringURL,
+                                                 fileTypeHint: Config.fileExtension)
+            aStringPlayer = try AVAudioPlayer(contentsOf: aStringURL, 
+                                              fileTypeHint: Config.fileExtension)
+            dStringPlayer = try AVAudioPlayer(contentsOf: dStringURL,
+                                              fileTypeHint: Config.fileExtension)
+            gStringPlayer = try AVAudioPlayer(contentsOf: gStringURL,
+                                              fileTypeHint: Config.fileExtension)
+            bStringPlayer = try AVAudioPlayer(contentsOf: bStringURL,
+                                              fileTypeHint: Config.fileExtension)
+            highEStringPlayer = try AVAudioPlayer(contentsOf: highEStringURL,
+                                                  fileTypeHint: Config.fileExtension)
 
         } catch {
             print("Failed to init AVAudioPlayers")

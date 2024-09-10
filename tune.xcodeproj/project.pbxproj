@@ -15,6 +15,7 @@
 		248B58A02C8A231100122C89 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B589F2C8A231100122C89 /* AudioPlayer.swift */; };
 		248B58A22C8A248800122C89 /* AudioPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B58A12C8A248800122C89 /* AudioPlayerViewModel.swift */; };
 		248B58A42C8A26BE00122C89 /* IAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B58A32C8A26BE00122C89 /* IAudioPlayer.swift */; };
+		249CDF1A2C90BCC000A34C85 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249CDF192C90BCC000A34C85 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		248B589F2C8A231100122C89 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		248B58A12C8A248800122C89 /* AudioPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewModel.swift; sourceTree = "<group>"; };
 		248B58A32C8A26BE00122C89 /* IAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAudioPlayer.swift; sourceTree = "<group>"; };
+		249CDF192C90BCC000A34C85 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				248B589F2C8A231100122C89 /* AudioPlayer.swift */,
 				248B58A32C8A26BE00122C89 /* IAudioPlayer.swift */,
+				249CDF192C90BCC000A34C85 /* Config.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				24635D9A2C86C004009D21D2 /* ContentView.swift in Sources */,
 				248B58A22C8A248800122C89 /* AudioPlayerViewModel.swift in Sources */,
 				24635D982C86C004009D21D2 /* tuneApp.swift in Sources */,
+				249CDF1A2C90BCC000A34C85 /* Config.swift in Sources */,
 				2485D2E32C8A209700C82AC5 /* GuitarStringsView.swift in Sources */,
 				248B58A02C8A231100122C89 /* AudioPlayer.swift in Sources */,
 				248B58A42C8A26BE00122C89 /* IAudioPlayer.swift in Sources */,
