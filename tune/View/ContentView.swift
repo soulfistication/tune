@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    let viewModel = AudioPlayerViewModel(player: AudioPlayer()!)
+    let viewModel = AudioPlayerViewModel(player: AudioPlayer(standard: Config.standardTuning)!)
 
     var body: some View {
         GuitarStringsView(viewModel: viewModel)

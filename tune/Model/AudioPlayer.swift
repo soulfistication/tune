@@ -9,46 +9,85 @@ import AVFAudio
 
 class AudioPlayer {
 
-    let lowEStringPlayer: AVAudioPlayer
-    let aStringPlayer: AVAudioPlayer
-    let dStringPlayer: AVAudioPlayer
-    let gStringPlayer: AVAudioPlayer
-    let bStringPlayer: AVAudioPlayer
-    let highEStringPlayer: AVAudioPlayer
+    private let standardTuning: Bool
+    private let lowEStringPlayer: AVAudioPlayer
+    private let aStringPlayer: AVAudioPlayer
+    private let dStringPlayer: AVAudioPlayer
+    private let gStringPlayer: AVAudioPlayer
+    private let bStringPlayer: AVAudioPlayer
+    private let highEStringPlayer: AVAudioPlayer
 
-    init?() {
-        guard let 
-                lowEStringURL = Bundle.main.url(forResource: Config.lowEStringFileName,
-                                                withExtension: Config.fileExtension),
-              let aStringURL = Bundle.main.url(forResource: Config.aStringFileName,
-                                               withExtension: Config.fileExtension),
-              let dStringURL = Bundle.main.url(forResource: Config.dStringFileName,
-                                               withExtension: Config.fileExtension),
-              let gStringURL = Bundle.main.url(forResource: Config.gStringFileName,
-                                               withExtension: Config.fileExtension),
-              let bStringURL = Bundle.main.url(forResource: Config.bStringFileName,
-                                               withExtension: Config.fileExtension),
-              let highEStringURL = Bundle.main.url(forResource: Config.highEStringFileName,
-                                                   withExtension: Config.fileExtension)
-        else { return nil }
+    init?(standard: Bool) {
+        self.standardTuning = standard
 
-        do {
-            lowEStringPlayer = try AVAudioPlayer(contentsOf: lowEStringURL,
-                                                 fileTypeHint: Config.fileExtension)
-            aStringPlayer = try AVAudioPlayer(contentsOf: aStringURL, 
-                                              fileTypeHint: Config.fileExtension)
-            dStringPlayer = try AVAudioPlayer(contentsOf: dStringURL,
-                                              fileTypeHint: Config.fileExtension)
-            gStringPlayer = try AVAudioPlayer(contentsOf: gStringURL,
-                                              fileTypeHint: Config.fileExtension)
-            bStringPlayer = try AVAudioPlayer(contentsOf: bStringURL,
-                                              fileTypeHint: Config.fileExtension)
-            highEStringPlayer = try AVAudioPlayer(contentsOf: highEStringURL,
+        if standard {
+            guard let
+                    lowEStringURL = Bundle.main.url(forResource: Config.lowEStringFileName,
+                                                    withExtension: Config.fileExtension),
+                  let aStringURL = Bundle.main.url(forResource: Config.aStringFileName,
+                                                   withExtension: Config.fileExtension),
+                  let dStringURL = Bundle.main.url(forResource: Config.dStringFileName,
+                                                   withExtension: Config.fileExtension),
+                  let gStringURL = Bundle.main.url(forResource: Config.gStringFileName,
+                                                   withExtension: Config.fileExtension),
+                  let bStringURL = Bundle.main.url(forResource: Config.bStringFileName,
+                                                   withExtension: Config.fileExtension),
+                  let highEStringURL = Bundle.main.url(forResource: Config.highEStringFileName,
+                                                       withExtension: Config.fileExtension)
+            else { return nil }
+
+            do {
+                lowEStringPlayer = try AVAudioPlayer(contentsOf: lowEStringURL,
+                                                     fileTypeHint: Config.fileExtension)
+                aStringPlayer = try AVAudioPlayer(contentsOf: aStringURL,
                                                   fileTypeHint: Config.fileExtension)
+                dStringPlayer = try AVAudioPlayer(contentsOf: dStringURL,
+                                                  fileTypeHint: Config.fileExtension)
+                gStringPlayer = try AVAudioPlayer(contentsOf: gStringURL,
+                                                  fileTypeHint: Config.fileExtension)
+                bStringPlayer = try AVAudioPlayer(contentsOf: bStringURL,
+                                                  fileTypeHint: Config.fileExtension)
+                highEStringPlayer = try AVAudioPlayer(contentsOf: highEStringURL,
+                                                      fileTypeHint: Config.fileExtension)
 
-        } catch {
-            print("Failed to init AVAudioPlayers")
-            return nil
+            } catch {
+                print("Failed to init AVAudioPlayers")
+                return nil
+            }
+        } else {
+            guard let
+                    lowEStringURL = Bundle.main.url(forResource: Config.lowDSharpStringFileName,
+                                                    withExtension: Config.fileExtension),
+                  let aStringURL = Bundle.main.url(forResource: Config.gSharpStringFileName,
+                                                   withExtension: Config.fileExtension),
+                  let dStringURL = Bundle.main.url(forResource: Config.cSharpStringFileName,
+                                                   withExtension: Config.fileExtension),
+                  let gStringURL = Bundle.main.url(forResource: Config.fSharpStringFileName,
+                                                   withExtension: Config.fileExtension),
+                  let bStringURL = Bundle.main.url(forResource: Config.aSharpStringFileName,
+                                                   withExtension: Config.fileExtension),
+                  let highEStringURL = Bundle.main.url(forResource: Config.highDSharpStringFileName,
+                                                       withExtension: Config.fileExtension)
+            else { return nil }
+
+            do {
+                lowEStringPlayer = try AVAudioPlayer(contentsOf: lowEStringURL,
+                                                     fileTypeHint: Config.fileExtension)
+                aStringPlayer = try AVAudioPlayer(contentsOf: aStringURL,
+                                                  fileTypeHint: Config.fileExtension)
+                dStringPlayer = try AVAudioPlayer(contentsOf: dStringURL,
+                                                  fileTypeHint: Config.fileExtension)
+                gStringPlayer = try AVAudioPlayer(contentsOf: gStringURL,
+                                                  fileTypeHint: Config.fileExtension)
+                bStringPlayer = try AVAudioPlayer(contentsOf: bStringURL,
+                                                  fileTypeHint: Config.fileExtension)
+                highEStringPlayer = try AVAudioPlayer(contentsOf: highEStringURL,
+                                                      fileTypeHint: Config.fileExtension)
+
+            } catch {
+                print("Failed to init AVAudioPlayers")
+                return nil
+            }
         }
 
         lowEStringPlayer.prepareToPlay()
