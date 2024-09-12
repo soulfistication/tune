@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24635D982C86C004009D21D2 /* tuneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24635D972C86C004009D21D2 /* tuneApp.swift */; };
+		24635D982C86C004009D21D2 /* TuneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24635D972C86C004009D21D2 /* TuneApp.swift */; };
 		24635D9A2C86C004009D21D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24635D992C86C004009D21D2 /* ContentView.swift */; };
 		24635D9C2C86C005009D21D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24635D9B2C86C005009D21D2 /* Assets.xcassets */; };
 		24635D9F2C86C005009D21D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24635D9E2C86C005009D21D2 /* Preview Assets.xcassets */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		24635D942C86C004009D21D2 /* tune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tune.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		24635D972C86C004009D21D2 /* tuneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tuneApp.swift; sourceTree = "<group>"; };
+		24635D972C86C004009D21D2 /* TuneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneApp.swift; sourceTree = "<group>"; };
 		24635D992C86C004009D21D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		24635D9B2C86C005009D21D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24635D9E2C86C005009D21D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		2485D2E02C8A202B00C82AC5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				24635D972C86C004009D21D2 /* tuneApp.swift */,
+				24635D972C86C004009D21D2 /* TuneApp.swift */,
 				24635D992C86C004009D21D2 /* ContentView.swift */,
 				2485D2E22C8A209700C82AC5 /* GuitarStringsView.swift */,
 			);
@@ -178,7 +178,7 @@
 			files = (
 				24635D9A2C86C004009D21D2 /* ContentView.swift in Sources */,
 				248B58A22C8A248800122C89 /* AudioPlayerViewModel.swift in Sources */,
-				24635D982C86C004009D21D2 /* tuneApp.swift in Sources */,
+				24635D982C86C004009D21D2 /* TuneApp.swift in Sources */,
 				249CDF1A2C90BCC000A34C85 /* Config.swift in Sources */,
 				2485D2E32C8A209700C82AC5 /* GuitarStringsView.swift in Sources */,
 				248B58A02C8A231100122C89 /* AudioPlayer.swift in Sources */,

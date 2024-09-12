@@ -9,56 +9,93 @@ import SwiftUI
 
 struct GuitarStringsView: View {
 
-    @ObservedObject var viewModel: AudioPlayerViewModel
+    @State private var standard = Config.standardTuning
+    @StateObject var viewModel: AudioPlayerViewModel
 
     var body: some View {
         VStack {
             Button {
                 viewModel.playLowEString()
             } label: {
-                Text("E")
-                    .font(.title)
-                    .fontWeight(.bold)
+                if standard {
+                    Text(Config.lowEString)
+                        .font(.title)
+                        .fontWeight(.bold)
+                } else {
+                    Text(Config.lowDSharp)
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
             }
             .padding(.vertical)
             Button {
                 viewModel.playAString()
             } label: {
-                Text("A")
-                    .font(.title)
-                    .fontWeight(.bold)
+                if standard {
+                    Text(Config.aString)
+                        .font(.title)
+                        .fontWeight(.bold)
+                } else {
+                    Text(Config.gSharp)
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
             }
             .padding(.vertical)
             Button {
                 viewModel.playDString()
             } label: {
-                Text("D")
-                    .font(.title)
-                    .fontWeight(.bold)
+                if standard {
+                    Text(Config.dString)
+                        .font(.title)
+                        .fontWeight(.bold)
+                } else {
+                    Text(Config.cSharp)
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
             }
             .padding(.vertical)
             Button {
                 viewModel.playGString()
             } label: {
-                Text("G")
-                    .font(.title)
-                    .fontWeight(.bold)
+                if standard {
+                    Text(Config.gString)
+                        .font(.title)
+                        .fontWeight(.bold)
+                } else {
+                    Text(Config.fSharp)
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
             }
             .padding(.vertical)
             Button {
                 viewModel.playBString()
             } label: {
-                Text("B")
-                    .font(.title)
-                    .fontWeight(.bold)
+                if standard {
+                    Text(Config.bString)
+                        .font(.title)
+                        .fontWeight(.bold)
+                } else {
+                    Text(Config.aSharp)
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
             }
             .padding(.vertical)
             Button {
                 viewModel.playHighEString()
             } label: {
-                Text("E")
-                    .font(.title)
-                    .fontWeight(.bold)
+                if standard {
+                    Text(Config.highEString)
+                        .font(.title)
+                        .fontWeight(.bold)
+                } else {
+                    Text(Config.highDSharp)
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
             }
             .padding(.vertical)
             if viewModel.isPlaying {
@@ -69,6 +106,9 @@ struct GuitarStringsView: View {
                 Image(systemName: "pause.circle.fill")
                     .imageScale(.large)
                     .padding(.vertical)
+            }
+            Toggle(isOn: $standard) {
+                Text("Standard")
             }
         }
         .padding()
