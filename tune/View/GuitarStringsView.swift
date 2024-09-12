@@ -14,6 +14,9 @@ struct GuitarStringsView: View {
 
     var body: some View {
         VStack {
+            Text("Ivan's Guitar tuner 🎸")
+                .font(.title)
+                .fontWeight(.bold)
             Button {
                 viewModel.playLowEString()
             } label: {
@@ -108,13 +111,15 @@ struct GuitarStringsView: View {
                     .padding(.vertical)
             }
             Toggle(isOn: $standard) {
-                Text("Standard")
-            }
+                Text("Standard or Half step down")
+                    .bold()
+                    .padding()
+            }.padding()
         }
         .padding()
     }
 }
 
 #Preview {
-    GuitarStringsView(viewModel: AudioPlayerViewModel(player: AudioPlayer(standard: Config.standardTuning)!))
+    GuitarStringsView(viewModel: AudioPlayerViewModel(player: AudioPlayer(standard: Config.standardTuning) ?? AudioPlayer()))
 }

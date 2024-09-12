@@ -21,8 +21,7 @@ class AudioPlayer {
         self.standardTuning = standard
 
         if standard {
-            guard let
-                    lowEStringURL = Bundle.main.url(forResource: Config.lowEStringFileName,
+            guard let lowEStringURL = Bundle.main.url(forResource: Config.lowEStringFileName,
                                                     withExtension: Config.fileExtension),
                   let aStringURL = Bundle.main.url(forResource: Config.aStringFileName,
                                                    withExtension: Config.fileExtension),
@@ -51,12 +50,11 @@ class AudioPlayer {
                                                       fileTypeHint: Config.fileExtension)
 
             } catch {
-                print("Failed to init AVAudioPlayers")
+                print("Failed to init standard AVAudioPlayers. Audio files not found")
                 return nil
             }
         } else {
-            guard let
-                    lowEStringURL = Bundle.main.url(forResource: Config.lowDSharpStringFileName,
+            guard let lowEStringURL = Bundle.main.url(forResource: Config.lowDSharpStringFileName,
                                                     withExtension: Config.fileExtension),
                   let aStringURL = Bundle.main.url(forResource: Config.gSharpStringFileName,
                                                    withExtension: Config.fileExtension),
@@ -85,7 +83,7 @@ class AudioPlayer {
                                                       fileTypeHint: Config.fileExtension)
 
             } catch {
-                print("Failed to init AVAudioPlayers")
+                print("Failed to init half step down AVAudioPlayers. Audio files not found")
                 return nil
             }
         }
@@ -96,6 +94,17 @@ class AudioPlayer {
         gStringPlayer.prepareToPlay()
         bStringPlayer.prepareToPlay()
         highEStringPlayer.prepareToPlay()
+    }
+
+    init() {
+        standardTuning = true
+        let outputURL = Bundle.main.url(forResource: "output", withExtension: ".mp3")!
+        lowEStringPlayer = try! AVAudioPlayer(contentsOf: outputURL, fileTypeHint: ".mp3")
+        aStringPlayer = try! AVAudioPlayer(contentsOf: outputURL, fileTypeHint: ".mp3")
+        dStringPlayer = try! AVAudioPlayer(contentsOf: outputURL, fileTypeHint: ".mp3")
+        gStringPlayer = try! AVAudioPlayer(contentsOf: outputURL, fileTypeHint: ".mp3")
+        bStringPlayer = try! AVAudioPlayer(contentsOf: outputURL, fileTypeHint: ".mp3")
+        highEStringPlayer = try! AVAudioPlayer(contentsOf: outputURL, fileTypeHint: ".mp3")
     }
 
     func playLowEString() {
