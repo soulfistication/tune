@@ -10,6 +10,7 @@ import SwiftUI
 struct GuitarStringsView: View {
 
     @State private var standard = Config.standardTuning
+    @State private var distorted = Config.distorted
     @StateObject var viewModel: AudioPlayerViewModel
 
     var body: some View {
@@ -110,11 +111,18 @@ struct GuitarStringsView: View {
                     .imageScale(.large)
                     .padding(.vertical)
             }
-            Toggle(isOn: $standard) {
-                Text("Standard or Half step down")
-                    .bold()
-                    .padding()
-            }.padding()
+            HStack(alignment: .firstTextBaseline) {
+                Toggle(isOn: $standard) {
+                    Text("Standard Tuning")
+                        .bold()
+                        .padding()
+                }
+                Toggle(isOn: $distorted) {
+                    Text("Distorted sound")
+                        .bold()
+                        .padding()
+                }
+            }
         }
         .padding()
     }

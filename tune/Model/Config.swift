@@ -10,6 +10,7 @@ import Foundation
 struct Config {
 
     static let standardTuning = true
+    static let distorted = false
 
     // Half step down sounds:
 
