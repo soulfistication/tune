@@ -19,56 +19,14 @@ struct GuitarStringsView: View {
                 .font(.title)
                 .fontWeight(.bold)
             Button {
-                viewModel.playLowEString()
+                viewModel.playHighEString()
             } label: {
                 if standard {
-                    Text(Config.lowEString)
+                    Text(Config.highEString)
                         .font(.title)
                         .fontWeight(.bold)
                 } else {
-                    Text(Config.lowDSharp)
-                        .font(.title)
-                        .fontWeight(.bold)
-                }
-            }
-            .padding(.vertical)
-            Button {
-                viewModel.playAString()
-            } label: {
-                if standard {
-                    Text(Config.aString)
-                        .font(.title)
-                        .fontWeight(.bold)
-                } else {
-                    Text(Config.gSharp)
-                        .font(.title)
-                        .fontWeight(.bold)
-                }
-            }
-            .padding(.vertical)
-            Button {
-                viewModel.playDString()
-            } label: {
-                if standard {
-                    Text(Config.dString)
-                        .font(.title)
-                        .fontWeight(.bold)
-                } else {
-                    Text(Config.cSharp)
-                        .font(.title)
-                        .fontWeight(.bold)
-                }
-            }
-            .padding(.vertical)
-            Button {
-                viewModel.playGString()
-            } label: {
-                if standard {
-                    Text(Config.gString)
-                        .font(.title)
-                        .fontWeight(.bold)
-                } else {
-                    Text(Config.fSharp)
+                    Text(Config.highDSharp)
                         .font(.title)
                         .fontWeight(.bold)
                 }
@@ -89,14 +47,56 @@ struct GuitarStringsView: View {
             }
             .padding(.vertical)
             Button {
-                viewModel.playHighEString()
+                viewModel.playGString()
             } label: {
                 if standard {
-                    Text(Config.highEString)
+                    Text(Config.gString)
                         .font(.title)
                         .fontWeight(.bold)
                 } else {
-                    Text(Config.highDSharp)
+                    Text(Config.fSharp)
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
+            }
+            .padding(.vertical)
+            Button {
+                viewModel.playDString()
+            } label: {
+                if standard {
+                    Text(Config.dString)
+                        .font(.title)
+                        .fontWeight(.bold)
+                } else {
+                    Text(Config.cSharp)
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
+            }
+            .padding(.vertical)
+            Button {
+                viewModel.playAString()
+            } label: {
+                if standard {
+                    Text(Config.aString)
+                        .font(.title)
+                        .fontWeight(.bold)
+                } else {
+                    Text(Config.gSharp)
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
+            }
+            .padding(.vertical)
+            Button {
+                viewModel.playLowEString()
+            } label: {
+                if standard {
+                    Text(Config.lowEString)
+                        .font(.title)
+                        .fontWeight(.bold)
+                } else {
+                    Text(Config.lowDSharp)
                         .font(.title)
                         .fontWeight(.bold)
                 }
