@@ -7,7 +7,7 @@
 
 import AVFAudio
 
-class StandardGuitarTuner {
+class StandardGuitarTuner: IGuitarTuner {
 
     private var lowEStringPlayer: AVAudioPlayer
     private var aStringPlayer: AVAudioPlayer

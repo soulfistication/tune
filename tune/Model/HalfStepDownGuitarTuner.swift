@@ -7,7 +7,7 @@
 
 import AVFAudio
 
-public class HalfStepDownGuitarTuner {
+public class HalfStepDownGuitarTuner: IHalfStepDownGuitarTuner {
 
     private var lowDSharpStringPlayer: AVAudioPlayer
     private var gSharpStringPlayer: AVAudioPlayer
