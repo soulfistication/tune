@@ -15,7 +15,7 @@ struct GuitarStringsView: View {
 
     var body: some View {
         VStack {
-            Text("Ivan's Guitar tuner 🎸")
+            Text("Guitar tuner 🎸")
                 .font(.title)
                 .fontWeight(.bold)
             Button {
