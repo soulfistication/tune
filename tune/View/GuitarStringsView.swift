@@ -128,10 +128,12 @@ struct GuitarStringsView: View {
             .padding(.vertical)
             if viewModel.isPlaying {
                 Image(systemName: "play.circle.fill")
+                    .font(.system(size: 50))
                     .imageScale(.large)
                     .padding(.vertical)
             } else {
                 Image(systemName: "pause.circle.fill")
+                    .font(.system(size: 50))
                     .imageScale(.large)
                     .padding(.vertical)
             }
