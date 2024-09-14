@@ -13,10 +13,11 @@
 		24635D9C2C86C005009D21D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24635D9B2C86C005009D21D2 /* Assets.xcassets */; };
 		24635D9F2C86C005009D21D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24635D9E2C86C005009D21D2 /* Preview Assets.xcassets */; };
 		2485D2E32C8A209700C82AC5 /* GuitarStringsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485D2E22C8A209700C82AC5 /* GuitarStringsView.swift */; };
-		248B58A02C8A231100122C89 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B589F2C8A231100122C89 /* AudioPlayer.swift */; };
+		248B58A02C8A231100122C89 /* StandardGuitarTuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B589F2C8A231100122C89 /* StandardGuitarTuner.swift */; };
 		248B58A22C8A248800122C89 /* AudioPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B58A12C8A248800122C89 /* AudioPlayerViewModel.swift */; };
-		248B58A42C8A26BE00122C89 /* IAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B58A32C8A26BE00122C89 /* IAudioPlayer.swift */; };
+		248B58A42C8A26BE00122C89 /* IGuitarTuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B58A32C8A26BE00122C89 /* IGuitarTuner.swift */; };
 		249CDF1A2C90BCC000A34C85 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249CDF192C90BCC000A34C85 /* Config.swift */; };
+		24B74D572C95DE0300B866B2 /* HalfStepDownGuitarTuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B74D562C95DE0300B866B2 /* HalfStepDownGuitarTuner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,10 +28,11 @@
 		24635D9B2C86C005009D21D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24635D9E2C86C005009D21D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2485D2E22C8A209700C82AC5 /* GuitarStringsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarStringsView.swift; sourceTree = "<group>"; };
-		248B589F2C8A231100122C89 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		248B589F2C8A231100122C89 /* StandardGuitarTuner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardGuitarTuner.swift; sourceTree = "<group>"; };
 		248B58A12C8A248800122C89 /* AudioPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewModel.swift; sourceTree = "<group>"; };
-		248B58A32C8A26BE00122C89 /* IAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAudioPlayer.swift; sourceTree = "<group>"; };
+		248B58A32C8A26BE00122C89 /* IGuitarTuner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGuitarTuner.swift; sourceTree = "<group>"; };
 		249CDF192C90BCC000A34C85 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		24B74D562C95DE0300B866B2 /* HalfStepDownGuitarTuner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfStepDownGuitarTuner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +86,9 @@
 		2485D2DF2C8A202400C82AC5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				248B589F2C8A231100122C89 /* AudioPlayer.swift */,
-				248B58A32C8A26BE00122C89 /* IAudioPlayer.swift */,
+				248B589F2C8A231100122C89 /* StandardGuitarTuner.swift */,
+				24B74D562C95DE0300B866B2 /* HalfStepDownGuitarTuner.swift */,
+				248B58A32C8A26BE00122C89 /* IGuitarTuner.swift */,
 				249CDF192C90BCC000A34C85 /* Config.swift */,
 			);
 			path = Model;
@@ -181,12 +184,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				24635D9A2C86C004009D21D2 /* ContentView.swift in Sources */,
+				24B74D572C95DE0300B866B2 /* HalfStepDownGuitarTuner.swift in Sources */,
 				248B58A22C8A248800122C89 /* AudioPlayerViewModel.swift in Sources */,
 				24635D982C86C004009D21D2 /* TuneApp.swift in Sources */,
 				249CDF1A2C90BCC000A34C85 /* Config.swift in Sources */,
 				2485D2E32C8A209700C82AC5 /* GuitarStringsView.swift in Sources */,
-				248B58A02C8A231100122C89 /* AudioPlayer.swift in Sources */,
-				248B58A42C8A26BE00122C89 /* IAudioPlayer.swift in Sources */,
+				248B58A02C8A231100122C89 /* StandardGuitarTuner.swift in Sources */,
+				248B58A42C8A26BE00122C89 /* IGuitarTuner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

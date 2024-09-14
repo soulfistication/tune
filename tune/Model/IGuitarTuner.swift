@@ -5,7 +5,7 @@
 //  Created by Ivan Almada on 9/5/24.
 //
 
-protocol IAudioPlayer {
+protocol GuitarTuner {
     func playLowEString()
     func playAString()
     func playDString()

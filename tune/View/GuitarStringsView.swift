@@ -129,5 +129,5 @@ struct GuitarStringsView: View {
 }
 
 #Preview {
-    GuitarStringsView(viewModel: AudioPlayerViewModel(player: AudioPlayer(standard: Config.standardTuning) ?? AudioPlayer()))
+    GuitarStringsView(viewModel: AudioPlayerViewModel())
 }

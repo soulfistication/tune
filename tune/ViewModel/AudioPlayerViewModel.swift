@@ -7,45 +7,81 @@
 
 import Foundation
 
-class AudioPlayerViewModel: ObservableObject, IAudioPlayer {
+class AudioPlayerViewModel: ObservableObject {
 
     @Published var isPlaying: Bool
 
-    private var player: AudioPlayer
+    private var standardGuitarTuner: StandardGuitarTuner
+    private var halfStepDownGuitarTuner: HalfStepDownGuitarTuner
 
-    init(player: AudioPlayer) {
-        self.player = player
-        self.isPlaying = player.isPlaying()
+    init() {
+        self.isPlaying = false
+        self.standardGuitarTuner = StandardGuitarTuner()
+        self.halfStepDownGuitarTuner = HalfStepDownGuitarTuner()
     }
+
+    // Standard tuning methods
 
     func playLowEString() {
         isPlaying.toggle()
-        player.playLowEString()
+        standardGuitarTuner.playLowEString()
     }
     
     func playAString() {
         isPlaying.toggle()
-        player.playAString()
+        standardGuitarTuner.playAString()
     }
     
     func playDString() {
         isPlaying.toggle()
-        player.playDString()
+        standardGuitarTuner.playDString()
     }
     
     func playGString() {
         isPlaying.toggle()
-        player.playGString()
+        standardGuitarTuner.playGString()
     }
     
     func playBString() {
         isPlaying.toggle()
-        player.playBString()
+        standardGuitarTuner.playBString()
     }
     
     func playHighEString() {
         isPlaying.toggle()
-        player.playHighEString()
+        standardGuitarTuner.playHighEString()
+    }
+
+    // Half step down tuning methods
+
+    func playLowDSharpString() {
+        isPlaying.toggle()
+        halfStepDownGuitarTuner.playLowDSharpString()
+    }
+
+    func playGSharpString() {
+        isPlaying.toggle()
+        halfStepDownGuitarTuner.playGSharpString()
+    }
+
+    func playCSharpString() {
+        isPlaying.toggle()
+        halfStepDownGuitarTuner.playCSharpString()
+    }
+
+    func playFSharpString() {
+        isPlaying.toggle()
+        halfStepDownGuitarTuner.playFSharpString()
+    }
+
+    func playASharpString() {
+        isPlaying.toggle()
+        halfStepDownGuitarTuner.playASharpString()
+    }
+
+    func playHighDSharpString() {
+        isPlaying.toggle()
+        halfStepDownGuitarTuner.playHighDSharpString()
     }
 
 }
