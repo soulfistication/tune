@@ -19,7 +19,11 @@ struct GuitarStringsView: View {
                 .font(.title)
                 .fontWeight(.bold)
             Button {
-                viewModel.playHighEString()
+                if standard {
+                    viewModel.playHighEString()
+                } else {
+                    viewModel.playLowDSharpString()
+                }
             } label: {
                 if standard {
                     Text(Config.highEString)
@@ -33,7 +37,11 @@ struct GuitarStringsView: View {
             }
             .padding(.vertical)
             Button {
-                viewModel.playBString()
+                if standard {
+                    viewModel.playBString()
+                } else {
+                    viewModel.playASharpString()
+                }
             } label: {
                 if standard {
                     Text(Config.bString)
@@ -47,7 +55,11 @@ struct GuitarStringsView: View {
             }
             .padding(.vertical)
             Button {
-                viewModel.playGString()
+                if standard {
+                    viewModel.playGString()
+                } else {
+                    viewModel.playFSharpString()
+                }
             } label: {
                 if standard {
                     Text(Config.gString)
@@ -61,7 +73,11 @@ struct GuitarStringsView: View {
             }
             .padding(.vertical)
             Button {
-                viewModel.playDString()
+                if standard {
+                    viewModel.playDString()
+                } else {
+                    viewModel.playCSharpString()
+                }
             } label: {
                 if standard {
                     Text(Config.dString)
@@ -75,7 +91,11 @@ struct GuitarStringsView: View {
             }
             .padding(.vertical)
             Button {
-                viewModel.playAString()
+                if standard {
+                    viewModel.playAString()
+                } else {
+                    viewModel.playGSharpString()
+                }
             } label: {
                 if standard {
                     Text(Config.aString)
@@ -89,7 +109,11 @@ struct GuitarStringsView: View {
             }
             .padding(.vertical)
             Button {
-                viewModel.playLowEString()
+                if standard {
+                    viewModel.playLowEString()
+                } else {
+                    viewModel.playLowDSharpString()
+                }
             } label: {
                 if standard {
                     Text(Config.lowEString)
